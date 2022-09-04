@@ -15,14 +15,14 @@ const displayCategories = categories => {
         liCreate.innerHTML = `
         <a class="nav-link active" aria-current="page" href="#" onclick="displayNewses('${categoryID}', '${categoryName}')">${categoryName}</a>
         `;
-        categoryContainer.appendChild(liCreate);
-        
+        categoryContainer.appendChild(liCreate);        
     });    
 }
 
 
 
 const displayNewses = async (id, category) => {
+    toggleSpinner(true);
     const urlNews = `https://openapi.programming-hero.com/api/news/category/${id}`
     const res = await fetch (urlNews);
     const data = await res.json();
@@ -68,9 +68,11 @@ const displayNewses = async (id, category) => {
         const starPercentage = `${(rating.number / 5) * 100}%`;
         document.querySelector( '.stars-inner').style.width = starPercentage;
     });
+    toggleSpinner(false);
 }
 
 const exploreDetails = async (id) => {
+    toggleSpinner(true);
     const urlDetails = `https://openapi.programming-hero.com/api/news/${id}`;
     const res = await fetch (urlDetails);
     const data = await res.json();
@@ -117,8 +119,17 @@ const exploreDetails = async (id) => {
     modalContainer.appendChild(createDiv);
     var myModal = new bootstrap.Modal(document.getElementById('exampleModal'))
     myModal.show()
-    
+    toggleSpinner(false);
+}
 
+const toggleSpinner = isLoadin => {
+    const loaderSection = document.getElementById('loader');
+    if (isLoadin){
+        loaderSection.classList.remove('d-none');
+    }
+    else {
+        loaderSection.classList.add('d-none');
+    }
 }
 
 
