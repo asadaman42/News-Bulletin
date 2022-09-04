@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<body>
+    <header></header>
+    <main>
+        <section class="container">
+
+            <div>
+                <h2 class="text-center">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-center">
+                    There are something you might want to know. Which are not more important also not less important. 
+                </p>
+            </div>
+
+            <div class="accordion px-lg-5" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                            01 - Var, Let, and Const - What's the Difference?
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                        <div class="accordion-body">
+                            <ul>
+                                <li><code>var</code> declarations are globally scoped or function scoped while <code>let</code> and <code>const</code> are block scoped.</li>
+                                <li><code>var</code> variables can be updated and re-declared within its scope; <code>let</code> variables can be updated but not re-declared; <code>const</code> variables can neither be updated nor re-declared.</li>
+                                <li>They are all hoisted to the top of their scope. But while <code>var</code> variables are initialized with <code>undefined</code>, <code>let</code> and <code>const</code> variables are not initialized.</li>
+                                <li>While <code>var</code> and <code>let</code> can be declared without being initialized, <code>const</code> must be initialized during declaration.</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                      02 - The Difference Between Regular Functions and Arrow Functions 
+                    </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                        <div class="accordion-body">
+                            <ol>
+                                <li>
+                                    <h6> Syntax </h6>
+                                </li>
+                                <li>
+                                    <h6> Arguments binding </h6>
+                                </li>
+                                <li>
+                                    <h6> Use of this keyword </h6>
+                                </li>
+                                <li>
+                                    <h6> Using new keyword </h6>
+                                </li>
+                                <li>
+                                    <h6> No duplicate named parameters </h6>
+                                </li>
+
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                            03 - .forEach(), .map(), .filter(), .find() What's the difference?
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                        <div class="accordion-body">
+                            
+                            <ul>
+                                <li>
+                                    <h6>.forEach:</h6>
+                                    <p><code>.forEach()</code>, is used to execute the same code on every element in an array but does not change the array and it returns undefined.</p>
+                                </li>
+                                <li>
+                                    <h6>.map()</h6>
+                                    <p><code>.map()</code> executes the same code on every element in an array and returns a new array with the updated elements.</p>
+                                </li>
+                                <li>
+                                    <h6>.filter()</h6>
+                                    <p><code>.filter()</code> checks every element in an array to see if it meets a certain criteria and returns a new array with the elements that return <code>truthy</code> for the criteria.</p>
+                                </li>
+                                <li>
+                                    <h6>.find()</h6>
+                                    <p><code>.find()</code>, The find() method is used to find all the descendant elements of the selected element. It finds the element in the DOM tree by traversing through the root to leaf.</p>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                        04 - Why should use backtick (`) ?  
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+                        <div class="accordion-body">
+                            <p>Template literals are literals delimited with backtick (`) characters, allowing for multi-line strings, for string interpolation with embedded expressions, and for special constructs called tagged templates.</p>
+                            <p>Template literals are sometimes informally called template strings, because they are used most commonly for string interpolation (to create strings by doing substitution of placeholders). However, a tagged template literal may not result in a string; it can be used with a custom tag function to perform whatever operations you want on the different parts of the template literal.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Script  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    
+</body>
+</html>
+
+
